@@ -48,3 +48,7 @@
   padding: 10px;
   background-color: #eeee9f;
 }
+
+.f-wrap {
+  flex-wrap: wrap;
+}

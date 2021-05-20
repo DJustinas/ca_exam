@@ -28,6 +28,9 @@ function App() {
               <Route path="/upload">
                   <Upload />
               </Route>
+              <Route path="/user/:id">
+                  Vienas vartotojas
+              </Route>
           </Switch>
         </div>
       </Router>

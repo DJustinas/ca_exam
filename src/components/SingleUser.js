@@ -1,13 +1,20 @@
-import React from 'react';
+import {useHistory} from 'react-router-dom';
 
-function SingleUser() {
+function SingleUser({user}) {
+    const history = useHistory
+
+    function changeRoute(){
+        history.push('/user/'+user._id)
+        console.log(user._id)
+    }
+/*pasitikrinti kas suluzta cia*/
     return (
-        <div className="userCard">
+        <div className="userCard" onClick={changeRoute}>
             <div>
-                Vardas
+                {user.title}
             </div>
             <div>
-                Amžius
+                {user.age}
             </div>
 
 
