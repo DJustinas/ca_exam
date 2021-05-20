@@ -2,37 +2,40 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.uploadForm {
+  padding: 20px;
+  width: 400px;
+  margin: 30px;
+  /*background-color: dodgerblue;*/
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.uploadForm input {
+  height: 40px;
+  background-color: #b5f1de;
+  color: #2d2828;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.uploadForm button {
+  background-color: #8bc0f5;
+  cursor: pointer;
+}
+
+.largeButton {
+  height: 50px;
+  width: 100%;
+  background-color: #2b6d58;
+  margin-top: 15px;
+  color: #eeee9f;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.d-flex {
+  display: flex;
 }
