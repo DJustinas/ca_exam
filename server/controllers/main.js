@@ -9,20 +9,19 @@ module.exports = {
             password
         } = req.body
 
-
         const user = new userDb
-        user.title = title,
-        user.age = age,
-        user.email = email,
-        user.password = password,
+        user.title = title
+        user.age = age
+        user.email = email
+        user.password = password
 
             user.save().then(data =>{
                 console.log(data)
                 res.send({success: true})
             })
-
-
-        console.log(req.body)
-        console.log('sup')
-    }
+    },
+     getUsers: async (req, res) => {
+        const users = await userDb.find()
+         res.send({success: true, users})
+     }
 }
