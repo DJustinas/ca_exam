@@ -13,7 +13,8 @@ export default {
         const res = await fetch(baseUrl + route, options)
         return await res.json()
     },
-    get: () => {
-
+    get: async (route) => {
+        const res = await fetch(baseUrl + route)
+        return await res.json()
     }
 }

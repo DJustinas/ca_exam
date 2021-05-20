@@ -1,8 +1,11 @@
-import React from 'react';
+import {useState as state} from 'react';
 
+import http from "../plugins/Fetch";
 function Gallery(props) {
+    const [users, setUsers] = state([])
     return (
-       <SingleUser/>
+        users.map((item, index) => <SingleUser key={index} user={item} />)
+
     );
 }
 
