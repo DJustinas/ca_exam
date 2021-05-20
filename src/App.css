@@ -39,3 +39,12 @@
 .d-flex {
   display: flex;
 }
+
+.margin-10 {
+  margin: 10px;
+}
+
+.userCard {
+  padding: 10px;
+  background-color: #eeee9f;
+}

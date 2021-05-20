@@ -16,8 +16,9 @@ module.exports = {
         user.email = email,
         user.password = password,
 
-            user.save().then(res =>{
-                console.log(res)
+            user.save().then(data =>{
+                console.log(data)
+                res.send({success: true})
             })
 
 
