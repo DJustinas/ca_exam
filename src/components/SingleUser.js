@@ -7,6 +7,8 @@ function SingleUser({user}) {
         history.push('/user/'+user._id)
         console.log(user._id)
     }
+
+
 /*pasitikrinti kas suluzta cia*/
     return (
         <div className="userCard" onClick={changeRoute}>
@@ -16,6 +18,9 @@ function SingleUser({user}) {
             <div>
                 {user.age}
             </div>
+
+            {/*<button onClick={updateUsers}>Atnaujinti posta</button>*/}
+            {/*<button onClick={deleteUser}>Ištrinti postą</button>*/}
 
 
         </div>

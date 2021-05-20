@@ -23,5 +23,29 @@ module.exports = {
      getUsers: async (req, res) => {
         const users = await userDb.find()
          res.send({success: true, users})
-     }
+     },
+
+     updateUsers: async (req, res) => {
+        userDb.findOneAndUpdate(
+            {_id: req.body.id},
+            {$set: {pass: req.body.pass}},
+            {returnOriginal: false})
+            .then(() =>{
+                let newUserDb = userDb.find()
+                res.send({error: false, message: "Slaptažodis sėkmingai pakeistas", info: newUserDb})
+            }).catch(e => {
+                res.send({error: true, message: e})
+        })
+
+     },
+
+    deleteUser: async (req, res) => {
+        await userDb.deleteOne({_id: req.params.id})
+            .then(() => {
+                let deletedUser = userDb.find()
+                res.send({error: false, message: 'Ištrintas vartotojas', info: deletedUser})
+            }).catch(e => {
+                res.send({error: true, message: e})
+            })
+    }
 }
